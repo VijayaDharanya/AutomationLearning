@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Suite" verbose="10">
+<parameter name="URL" value="https://dev100201.service-now.com/"/>
+<parameter name="UName" value="admin"/>
+<parameter name="Password" value="Malaysia@94"/>
+  <test thread-count="3" parallel="classes" name="Test">
+  <parameter name="browserName" value="Chrome"/>
+    <classes>
+      <class name="serviceNow.SN3Mobile"/>
+      <class name="serviceNow.SN4Proposal"/>
+      <class name="serviceNow.SN5Caller"/>
+      <class name="serviceNow.SN7Knowledge"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
